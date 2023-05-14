@@ -11,7 +11,7 @@ export const Landing = () => {
 
       <div className={styles.content}>
         <h1 className={styles.title}>
-          HEY 👋 ARE YOU LOOKING
+          HEY ARE YOU LOOKING
           <br />
           FOR UX/UI DESIGNER? WELL…
           <br />I KNOW SOMEONE WHO’S
