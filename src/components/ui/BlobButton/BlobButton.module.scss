@@ -1,0 +1,77 @@
+@import "../../../styles/devices";
+
+$transition: 0.3s cubic-bezier(0.585, 2.5, 0.645, 0.5);
+$clip-path: (
+  big:
+    path(
+      "M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z"
+    ),
+  big-hover:
+    path(
+      "M 143 87 C 117 106 74 110.5 45.5 101.5 C 17 92.5 -10.5 67 5.5 41.5 C 21.5 16 79 4.5 130.5 14 C 182 23.5 169 68 143 87 Z"
+    ),
+  small:
+    path(
+      "M 108.15 61.95 C 91.7 79.45 43 76 21 62.65 C -1.75 48.3 -2.45 29.4 2 20 C 8.75 6.3 21 1 60 5 C 94 11 124.6 44.45 108.15 61.95 Z"
+    ),
+  small-hover:
+    path(
+      "M 100.1 63.9 C 81.9 77.2 51.8 80.35 31.85 74.05 C 11.9 67.75 -7.35 49.9 3.85 32.05 C 15.05 14.2 55.3 6.15 91.35 12.8 C 127.4 19.45 118.3 50.6 100.1 63.9 Z"
+    ),
+);
+
+.blobButton {
+  font-family: inherit;
+  font-size: 1rem;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  width: 120px;
+  height: 80px;
+  background: none;
+  color: white;
+  font-weight: 700;
+  font-style: "Poppins";
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  clip-path: map-get($clip-path, small);
+  transition: clip-path $transition;
+
+  span {
+    mix-blend-mode: difference;
+    display: block;
+  }
+
+  &.black {
+    background: #1e1e1e;
+  }
+
+  &.small {
+    width: 120px;
+    height: 80px;
+    clip-path: map-get($clip-path, small);
+
+    &:hover {
+      clip-path: map-get($clip-path, small-hover);
+    }
+  }
+
+  &:hover {
+    clip-path: map-get($clip-path, small-hover);
+  }
+}
+
+@media (min-width: $tablet) {
+  .blobButton {
+    width: 175px;
+    height: 120px;
+    clip-path: map-get($clip-path, big);
+
+    &:hover {
+      clip-path: map-get($clip-path, big-hover);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../../styles/devices";
+
+.container {
+  width: 100%;
+
+  .inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+
+  @media (min-width: $mobile) {
+    .inner {
+      padding: 4rem 2rem;
+    }
+  }
+}

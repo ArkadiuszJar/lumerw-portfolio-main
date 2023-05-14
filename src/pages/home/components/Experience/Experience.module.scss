@@ -1,0 +1,28 @@
+.experience {
+  background: #ffeb5d;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+
+  .title {
+    font-weight: 600;
+    font-size: 2rem;
+    margin: auto;
+  }
+
+  .textCarousel {
+    .text {
+      padding: 0 1rem;
+
+      span {
+        display: block;
+        font-size: 1.2rem;
+        border-radius: 4rem;
+        padding: 0.5rem 1.5rem;
+        background: #00000010;
+      }
+    }
+  }
+}

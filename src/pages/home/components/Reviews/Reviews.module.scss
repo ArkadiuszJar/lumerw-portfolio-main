@@ -1,0 +1,119 @@
+@import "src/styles/devices";
+
+.header {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+
+  .avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 6rem #5a62ffb0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .details {
+    line-height: 1.8rem;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        font-size: 1.2rem;
+      }
+
+      span {
+        margin-left: 6px;
+      }
+    }
+  }
+}
+
+.pagination {
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  width: 100%;
+  gap: 0.4rem;
+  max-width: 350px;
+}
+
+.bullet {
+  background: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1rem;
+
+  .buttons {
+    display: flex;
+    gap: 0.5rem;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 70px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      border-radius: 2rem;
+      border: 2px solid white;
+      cursor: pointer;
+      transition: 0.15s;
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      .next,
+      .prev {
+        transition: 0.15s;
+      }
+
+      &:not(:disabled):hover {
+        background: #fe875c;
+        color: black;
+        border-color: #fe875c;
+
+        .prev {
+          transform: translateX(-12px);
+        }
+
+        .next {
+          transform: translateX(12px);
+        }
+      }
+
+      &:not(:disabled):active {
+        .prev {
+          transform: translateX(-16px);
+        }
+
+        .next {
+          transform: translateX(16px);
+        }
+      }
+    }
+  }
+}

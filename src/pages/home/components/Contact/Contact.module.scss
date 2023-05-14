@@ -1,0 +1,87 @@
+@import "../../../../styles/devices";
+
+.header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: #350f1c;
+  transition: transform 0.2s;
+
+  &.open {
+    transform: rotate(-180deg);
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #6d0a2b;
+  user-select: none;
+}
+
+.content {
+  overflow: hidden;
+  height: 0;
+}
+
+.form {
+  font-size: 1.3rem;
+  line-height: 2.7rem;
+  color: #5d3e3e;
+
+  input,
+  textarea {
+    font-size: inherit;
+    border: none;
+    position: relative;
+    border-bottom: 2px solid #00000040;
+    font-family: inherit;
+    transition: background 0.15s, border-color 0.15s;
+    background: #00000008;
+    padding: 0 5px;
+
+    &::placeholder {
+      color: #00000060;
+    }
+
+    &:focus {
+      outline: none;
+      background: #fae649;
+      border-bottom: 2px solid #6d0a2b;
+    }
+  }
+
+  input {
+    max-width: 100%;
+    width: calc(100% - 1rem);
+  }
+
+  textarea {
+    width: 100%;
+    resize: vertical;
+    margin: 3rem 0 1rem 0;
+    min-height: 8rem;
+  }
+}
+
+@media (min-width: $tablet) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .form {
+    font-size: 1.8rem;
+    line-height: 4.5rem;
+
+    input {
+      width: 300px;
+    }
+  }
+}

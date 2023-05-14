@@ -1,0 +1,16 @@
+#fullscreen-swiper-pagination.swiper-pagination {
+  .swiper-pagination-bullet {
+    background: white;
+    border-radius: 1rem !important;
+    height: 3px !important;
+    flex: 1;
+    opacity: 0.4;
+    transition: 0.15s;
+    cursor: pointer;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    flex: 2;
+  }
+}

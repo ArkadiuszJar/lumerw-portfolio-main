@@ -1,0 +1,30 @@
+.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: center;
+
+  .mouse {
+    font-size: 2.5rem;
+    animation: bounceScroll 1s infinite;
+  }
+
+  .arrow {
+    font-size: 2rem;
+    animation: bounceScroll 1s infinite 0.1s;
+  }
+}
+
+@keyframes bounceScroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

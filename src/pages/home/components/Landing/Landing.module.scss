@@ -1,0 +1,90 @@
+@import "../../../../styles/devices";
+
+.spacer {
+  height: 6rem;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    height: 10rem;
+  }
+}
+
+.landing {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 0 0 3rem black;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .name {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.8rem;
+      color: inherit;
+      transition: transform 0.15s;
+
+      &:hover {
+        transform: translateY(-0.4rem);
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 1rem 2rem;
+
+    .title {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    gap: 2rem;
+    padding: 1rem 4rem;
+
+    .title {
+      font-size: min(5vw, 5rem);
+      text-align: left;
+    }
+
+    .name {
+      text-align: left;
+      font-size: 2rem;
+    }
+  }
+}

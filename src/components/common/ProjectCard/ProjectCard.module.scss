@@ -1,0 +1,196 @@
+@import "../../../styles/devices";
+
+.projectCard {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.header {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  font-size: 1rem;
+
+  .counter,
+  .date {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 2px solid black;
+  }
+
+  .counter {
+    flex: 1;
+  }
+
+  .date {
+    flex: 3;
+  }
+}
+
+.title {
+  margin: 2rem 0 1rem 0;
+  font-size: 2rem;
+}
+
+.content {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.technologies {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+  color: #000000c0;
+
+  li {
+    border-radius: 1rem;
+  }
+}
+
+.swiper {
+  flex: 2;
+
+  .slide {
+    img {
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      width: 100%;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.pagination {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 0.4rem;
+  max-width: 350px;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 70px;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 2rem;
+    border-radius: 2rem;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.15s;
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .next,
+    .prev {
+      transition: 0.15s;
+    }
+
+    &:not(:disabled):hover {
+      background: black;
+      color: white;
+      border-color: black;
+
+      .prev {
+        transform: translateX(-12px);
+      }
+
+      .next {
+        transform: translateX(12px);
+      }
+    }
+
+    &:not(:disabled):active {
+      .prev {
+        transform: translateX(-16px);
+      }
+
+      .next {
+        transform: translateX(16px);
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    margin: 2rem 0;
+    font-size: 3rem;
+  }
+
+  .navigation {
+    margin: 1rem 2rem 0 1rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .details {
+    position: inherit;
+
+    .links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .technologies {
+    justify-content: start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
